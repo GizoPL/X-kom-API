@@ -5,7 +5,6 @@ namespace XkomAPI.Dtos
 {
     public class ReadMeetingDto
     {
-        
         public int Id {get; set;}
        
         public string NameOfMeeting { get; set;}

@@ -12,6 +12,5 @@ namespace XkomAPI.Reposiotory
         void DeleteMeeting(Meeting meeting);
         void JoinUserToMeeting(User user);
         bool SaveChanges();
-        
     }
 }

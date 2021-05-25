@@ -14,8 +14,6 @@ namespace XkomAPI.Model
         public string OwnerOfMeetng { get; set; }
         [Required]
         public DateTime MeetingDateTime { get; set; }
-
         public virtual ICollection<User> Members { get; set; }
-
     }
 }

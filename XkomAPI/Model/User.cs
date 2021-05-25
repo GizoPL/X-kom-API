@@ -11,9 +11,7 @@ namespace XkomAPI.Model
         public string Email { get; set;}
         [Required]
         public string Surname { get; set; }
-        
         public int MeetingId { get; set; }
-
         [ForeignKey("MeetingId")]
         public virtual Meeting Meeting { get; set; }
     }

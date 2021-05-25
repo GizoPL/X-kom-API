@@ -6,15 +6,12 @@ using XkomAPI.Reposiotory;
 
 namespace XkomAPI.Dtos
 {
-    
     [Route("api/[controller]")]
     [ApiController]
-
     public class MeetingController : ControllerBase
     {
         private readonly IMapper _mapper;
         private readonly IxkomRepo _repository;
-
         public MeetingController(IMapper mapper, IxkomRepo repository)
         {
             _mapper = mapper;
@@ -72,7 +69,5 @@ namespace XkomAPI.Dtos
             
             return NoContent();
         }
-        
-
     }
 }

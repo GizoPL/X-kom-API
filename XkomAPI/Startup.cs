@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -12,7 +14,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using XkomAPI.Dtos;
 using XkomAPI.Reposiotory;
+using XkomAPI.Validators;
 
 namespace XkomAPI
 {
@@ -29,9 +33,10 @@ namespace XkomAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApiContex>(opt => opt.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddControllers();
+            services.AddControllers().AddFluentValidation();
             services.AddScoped<IxkomRepo,xkomRepo>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddScoped<IValidator<JoinMeetingUserDto>,JoinMeetingUserDtoValidator>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "XkomAPI", Version = "v1" });

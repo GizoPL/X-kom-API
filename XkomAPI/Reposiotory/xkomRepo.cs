@@ -21,7 +21,6 @@ namespace XkomAPI.Reposiotory
             // {
             //     throw new ArgumentNullException(nameof(meeting));
             // }
-
             _context.Meetings.Add(meeting);
         }
 
@@ -31,7 +30,6 @@ namespace XkomAPI.Reposiotory
             // {
             //     throw new  ArgumentNullException(nameof(meeting));
             // }
-
             var members = _context.Users.Where(p => p.MeetingId == meeting.Id).ToList();
 
             if(members.Count > 0)
@@ -83,7 +81,6 @@ namespace XkomAPI.Reposiotory
 
             _context.Users.Add(user);
         }
-
         public bool SaveChanges()
         {
             return (_context.SaveChanges() >= 0 );

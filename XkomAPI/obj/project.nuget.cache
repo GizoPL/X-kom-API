@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "voo0XwdXDE2VfNZn847gIm8YAEwfO4BwP4YN9ZGKHMOfTnaxrhO9FsHnVJP1M9tMoYBOUjszjugoRMVPuZ5y+Q==",
+  "dgSpecHash": "C2ARoCVBWcUvYiLnWpMaNJyAPIGI2KSx3e6TsTSaJRA0b1bk7+/JP5Yk1TciiyKJynAVVe6a0PtU8fpot+29yQ==",
   "success": true,
   "projectFilePath": "/home/pawcio/Pulpit/XkomAPI/XkomAPI/XkomAPI.csproj",
   "expectedPackageFiles": [
     "/home/pawcio/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
     "/home/pawcio/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.1.1/automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
+    "/home/pawcio/.nuget/packages/fluentvalidation/10.1.0/fluentvalidation.10.1.0.nupkg.sha512",
+    "/home/pawcio/.nuget/packages/fluentvalidation.aspnetcore/10.1.0/fluentvalidation.aspnetcore.10.1.0.nupkg.sha512",
+    "/home/pawcio/.nuget/packages/fluentvalidation.dependencyinjectionextensions/10.1.0/fluentvalidation.dependencyinjectionextensions.10.1.0.nupkg.sha512",
     "/home/pawcio/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/home/pawcio/.nuget/packages/microsoft.aspnetcore.cryptography.internal/5.0.6/microsoft.aspnetcore.cryptography.internal.5.0.6.nupkg.sha512",
     "/home/pawcio/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/5.0.6/microsoft.aspnetcore.cryptography.keyderivation.5.0.6.nupkg.sha512",

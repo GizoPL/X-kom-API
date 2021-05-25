@@ -25,11 +25,10 @@ namespace XkomAPI.Controllers
             var user = _mapper.Map<User>(joinMeetingUserDto);
 
             _repository.JoinUserToMeeting(user);
-            
+
             _repository.SaveChanges();
 
             return Ok();          
         }
-        
     }
 }

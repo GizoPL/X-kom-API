@@ -12,7 +12,6 @@ namespace XkomAPI.ProfileDto
             CreateMap<User, JoinMeetingUserDto>().ReverseMap();
             CreateMap<Meeting, ReadMeetingDto>().ReverseMap();
             CreateMap<User, ReadUserDto>().ReverseMap();
-        
         }
     }
 }
