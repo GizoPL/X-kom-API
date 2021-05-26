@@ -22,5 +22,6 @@ namespace XkomAPI
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+                
     }
 }

@@ -15,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using XkomAPI.Dtos;
+using XkomAPI.Middleware;
 using XkomAPI.Reposiotory;
 using XkomAPI.Validators;
 
@@ -37,6 +38,7 @@ namespace XkomAPI
             services.AddScoped<IxkomRepo,xkomRepo>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddScoped<IValidator<JoinMeetingUserDto>,JoinMeetingUserDtoValidator>();
+            services.AddScoped<ErrorHandlingMiddleware>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "XkomAPI", Version = "v1" });
@@ -52,7 +54,7 @@ namespace XkomAPI
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "XkomAPI v1"));
             }
-
+            app.UseMiddleware<ErrorHandlingMiddleware>();
             app.UseHttpsRedirection();
 
             app.UseRouting();

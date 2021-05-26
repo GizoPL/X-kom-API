@@ -30,11 +30,6 @@ namespace XkomAPI.Dtos
         public ActionResult<ReadMeetingDto> GetMeetingById(int id)
         {
             var meeting = _repository.GetMeetingById(id);
-
-            if(meeting is null)
-            {
-                return NotFound();
-            }
             
             return Ok(_mapper.Map<ReadMeetingDto>(meeting));
         }
