@@ -5,7 +5,7 @@ API umożliwia:
 1) Tworzenie spotkań,
 2) Usuwanie spotkań,
 3) Zwrócenie listy spotkań,
-4) Zapis uczestnika na sptokanie.
+4) Zapis uczestnika na spotkanie.
 
 Wymagania:
 1) Do spotkania może dołączyć maksymalnie 25 osób,
